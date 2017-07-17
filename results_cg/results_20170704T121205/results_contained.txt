@@ -1,0 +1,114 @@
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000007265-protein1205-1252056-1252674.fasta
+GCA_000689235.1_GBCO_p1_genomic.fna	2-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000007265-protein641-646915-647701.fasta
+GCA_000599965.1_ASM59996v1_genomic.fna	4-->CS3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000007265-protein887-922853-923465.fasta
+GCA_001190885.1_ASM119088v1_genomic.fna	12-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000012705-protein2241-151236-151890.fasta
+GCA_000299135.1_ASM29913v1_genomic.fna	2-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000196055-protein1745-1805232-1805829.fasta
+GCA_000730255.1_ASM73025v1_genomic.fna	2-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000302475-protein1482-1496857-1497367.fasta
+GCA_000012705.1_ASM1270v1_genomic.fna	2-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000302475-protein1500-1512938-1513517.fasta
+GCA_000012705.1_ASM1270v1_genomic.fna	3-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000427035-protein2713-973482-974544.fasta
+GCA_001190885.1_ASM119088v1_genomic.fna	9-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000427075-protein2563-578126-579161.fasta
+GCA_000427055.1_ILRI112_genomic.fna	2-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000427075-protein3418-1405851-1407384.fasta
+GCA_000299135.1_ASM29913v1_genomic.fna	3-->CD2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000599965-protein1222-1208874-1209147.fasta
+GCA_000427075.1_ILRI005_genomic.fna	4-->CS3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000689235-protein1050-1109635-1110838.fasta
+GCA_001448985.1_ASM144898v1_genomic.fna	14-->CD6
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000689235-protein1961-2030808-2031420.fasta
+GCA_001266635.1_ASM126663v1_genomic.fna	8-->CS4
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000689235-protein889-947208-948147.fasta
+GCA_000427035.1_09mas018883_genomic.fna	5-->CD2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000689235-protein911-969594-970026.fasta
+GCA_001655175.1_ASM165517v1_genomic.fna	9-->CD3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000730215-protein2322-353462-354815.fasta
+GCA_001190865.1_ASM119086v1_genomic.fna	10-->CD6
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000730255-protein1046-1089828-1090779.fasta
+GCA_000689235.1_GBCO_p1_genomic.fna	7-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000730255-protein1587-1645261-1645855.fasta
+GCA_000427075.1_ILRI005_genomic.fna	6-->CS5
+GCA_001266635.1_ASM126663v1_genomic.fna	11-->CS5
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000730255-protein1797-1867455-1869957.fasta
+GCA_000689235.1_GBCO_p1_genomic.fna	3-->CS2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000782855-protein3771-1850703-1851912.fasta
+GCA_001026925.1_ASM102692v1_genomic.fna	4-->CD3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000831105-protein1886-1977994-1979521.fasta
+GCA_001026925.1_ASM102692v1_genomic.fna	13-->CD11
+GCA_001592385.1_ASM159238v1_genomic.fna	16-->CS14
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-000831105-protein198-219975-220431.fasta
+GCA_000012705.1_ASM1270v1_genomic.fna	3-->CD2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001026925-protein1405-1485320-1486490.fasta
+GCA_000831105.1_ASM83110v1_genomic.fna	12-->CD2
+GCA_001655175.1_ASM165517v1_genomic.fna	14-->CD4
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001026925-protein1463-1540615-1541311.fasta
+GCA_000196055.1_ASM19605v1_genomic.fna	3-->CD2
+GCA_000427035.1_09mas018883_genomic.fna	4-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001026925-protein1548-1621690-1622680.fasta
+GCA_000299135.1_ASM29913v1_genomic.fna	3-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001026925-protein1564-1632646-1633561.fasta
+GCA_000427075.1_ILRI005_genomic.fna	5-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001026925-protein171-194167-194833.fasta
+GCA_001592385.1_ASM159238v1_genomic.fna	9-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001026925-protein1876-1946083-1950799.fasta
+GCA_000299135.1_ASM29913v1_genomic.fna	5-->CD3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001026925-protein780-821720-823589.fasta
+GCA_000299135.1_ASM29913v1_genomic.fna	2-->CD1
+GCA_001275545.2_ASM127554v2_genomic.fna	10-->CS2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001190805-protein2942-999372-1000443.fasta
+GCA_000782855.1_ASM78285v1_genomic.fna	9-->CS5
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001190885-protein2739-935968-936607.fasta
+GCA_000427035.1_09mas018883_genomic.fna	5-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001266635-protein799-844633-846019.fasta
+GCA_000427075.1_ILRI005_genomic.fna	6-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001275545-protein2405-493602-494775.fasta
+GCA_000012705.1_ASM1270v1_genomic.fna	2-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001448985-protein1964-2025944-2027333.fasta
+GCA_001275545.2_ASM127554v2_genomic.fna	11-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001552035-protein2862-799884-800619.fasta
+GCA_000427055.1_ILRI112_genomic.fna	3-->CD1
+GCA_000831105.1_ASM83110v1_genomic.fna	8-->CS3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001552035-protein3105-1062980-1067408.fasta
+GCA_000831125.1_ASM83112v1_genomic.fna	12-->CS11
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001552035-protein3517-1499123-1499528.fasta
+GCA_000689235.1_GBCO_p1_genomic.fna	7-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein1168-1196103-1199862.fasta
+GCA_000730215.2_ASM73021v2_genomic.fna	11-->CS6
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein1192-1226909-1228145.fasta
+GCA_000689235.1_GBCO_p1_genomic.fna	4-->CS2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein1207-1242851-1244228.fasta
+GCA_001190885.1_ASM119088v1_genomic.fna	10-->CD2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein1248-1284202-1285012.fasta
+GCA_000782855.1_ASM78285v1_genomic.fna	8-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein1345-1383396-1384869.fasta
+GCA_000427075.1_ILRI005_genomic.fna	6-->CS5
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein1784-1832105-1833029.fasta
+GCA_001190845.1_ASM119084v1_genomic.fna	10-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein185-162060-163611.fasta
+GCA_001266635.1_ASM126663v1_genomic.fna	12-->CS6
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein1862-1893783-1894545.fasta
+GCA_000299135.1_ASM29913v1_genomic.fna	3-->CD1
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein237-222646-224275.fasta
+GCA_001190885.1_ASM119088v1_genomic.fna	12-->CD2
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein513-508754-509204.fasta
+GCA_000599965.1_ASM59996v1_genomic.fna	8-->CD5
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein528-522040-523156.fasta
+GCA_000689235.1_GBCO_p1_genomic.fna	9-->CS3
+GCA_000831125.1_ASM83112v1_genomic.fna	12-->CS3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001592385-protein971-1000885-1001458.fasta
+GCA_000599965.1_ASM59996v1_genomic.fna	5-->CS3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001655175-protein1583-1568681-1569671.fasta
+GCA_001275545.2_ASM127554v2_genomic.fna	10-->CD3
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001655175-protein1690-1674428-1675277.fasta
+GCA_000730215.2_ASM73021v2_genomic.fna	9-->CS5
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001655175-protein458-464875-465580.fasta
+GCA_000730255.1_ASM73025v1_genomic.fna	8-->CS7
+GCA_000782855.1_ASM78285v1_genomic.fna	9-->CS7
+/home/msilva/Desktop/test_fullBBACA/schema_seed/GCA-001683515-protein3881-2053952-2055854.fasta
+GCA_000196055.1_ASM19605v1_genomic.fna	4-->CS2
