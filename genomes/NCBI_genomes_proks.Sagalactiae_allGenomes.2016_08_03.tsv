@@ -1,4 +1,4 @@
-Genome		Organism/Name	Strain	CladeID	BioSample	BioProject	Group	SubGroup	Assembly	Size (Mb)	GC%	Replicons	WGS	Scaffolds	Genes	Proteins	Release Date	Modify Date	Level
+Genome	Organism/Name	Strain	CladeID	BioSample	BioProject	Group	SubGroup	Assembly	Size (Mb)	GC%	Replicons	WGS	Scaffolds	Genes	Proteins	Release Date	Modify Date	Level
 GCA_000007265.1_ASM726v1_genomic.fna	Streptococcus agalactiae 2603V/R	2603V/R	20122	SAMN02604013 	PRJNA330	Terrabacteria group	Firmicutes	GCA_000007265.1 	2.16027	35.6	chromosome:NC_004116.1/AE009948.1	-	1	2279	2127	2002/08/28	2016/04/18	Complete Genome
 GCA_000012705.1_ASM1270v1_genomic.fna	Streptococcus agalactiae A909	A909	20122	SAMN02604011 	PRJNA326	Terrabacteria group	Firmicutes	GCA_000012705.1 	2.12784	35.6	chromosome:NC_007432.1/CP000114.1	-	1	2150	2026	2005/09/29	2015/08/12	Complete Genome
 GCA_000299135.1_ASM29913v1_genomic.fna	Streptococcus agalactiae GD201008-001	GD201008-001	20122	SAMN02603155 	PRJNA169338	Terrabacteria group	Firmicutes	GCA_000299135.1 	2.06311	35.6	chromosome:NC_018646.1/CP003810.1	-	1	2059	1940	2012/09/24	2015/08/14	Complete Genome
