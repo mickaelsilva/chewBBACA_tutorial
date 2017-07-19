@@ -1,8 +1,9 @@
 [comment]: <> (Create chewbbaca-tutorial git)
 
+All information about NCBI genomes used in this example is on the .tsv file inside the genomes folder.
 
 ## Schema creation 
-was performed using the **32** _Streptococcus agalactiae_ complete genomes available at NCBI,
+was performed using the **32** _Streptococcus agalactiae_ complete genomes (32 genomes with a level of assembly classified as complete genome or chromossome)  available at NCBI,
  resulting in a wgMLST schema of **3128 loci**.
 
 `chewBBACA.py CreateSchema -i complete_genomes/ --cpu 6 -o schema_seed -t Streptococcus_Agalactiae`
@@ -30,20 +31,21 @@ Run on intel core i7 with:
  
 returned a set of 24 loci that were removed from further analysis.
 
-`/home/user/chewBBACA/utils/RemoveGenes.py -i results_alleles.txt -g RepeatedLoci.txt -o alleleCallMatrix_cg.tsv`
+`chewBBACA.py RemoveGenes -i results_alleles.txt -g RepeatedLoci.txt -o alleleCallMatrix_cg.tsv`
 
 
 A set of **1136** loci were found to be present in all the analyzed complete genomes, while **1264** loci were present in at least 95%.
 
-`/home/user/chewBBACA/utils/TestGenomeQuality.py -i alleleCallMatrix_cg.tsv -n 13 -t 200 -s 5`
+`chewBBACA.py TestGenomeQuality -i alleleCallMatrix_cg.tsv -n 13 -t 200 -s 5`
 
 ![Genome quality testing of complete genomes](http://i.imgur.com/Zh6GRk9.png)
+[larger image fig 1](http://i.imgur.com/Zh6GRk9.png)
 
 
 ## Enriching the dataset analysis
 with other assemblies submitted as **Streptococcus Agalactiae** on NCBI were downloaded ( 03-08-2016, downloadable zip file [here](https://drive.google.com/file/d/0Bw6VuoagsdhmaWEtR25fODlJTEk/view?usp=sharing)) 
 and analyzed with [MLST](https://github.com/tseemann/mlst) in order to exclude possible mislabeled 
-samples as Streptococcus Agalactiae. A total of **682 genomes** were downloaded being two detected 
+samples as Streptococcus Agalactiae. A total of **682 genomes** were downloaded being 2 (GCA_000323065.2_ASM32306v2 and GCA_001017915.1_ASM101791v1) detected 
 as being a different species/contamination and removed from the analysis. 
 Allele call was performed on the remaining 680 genomes using the **1264 loci** for schema validation. Paralog detection found no paralog loci.
 
@@ -61,7 +63,7 @@ Run on a slurm based HPC :
 
 Since our complete genomes allele call was performed with the wgMLST schema we need to remove the loci that constitute the auxiliary genome, in order to concatenate the matrixes with the same loci.
 
-```/home/user/chewBBACA/utils/RemoveGenes.py -i alleleCallMatrix.tsv -g listgenes_core.txt -o cg_completegenomes --inverse```
+```chewBBACA.py RemoveGenes -i alleleCallMatrix.tsv -g listgenes_core.txt -o cg_completegenomes --inverse```
 
 This command removes all loci that are not present int listgenes_core. The output cg_completegenomes.tsv file can now be concatenated with the result allele call of the 680 genomes.
 
@@ -71,6 +73,7 @@ or most of the genomes (90%<x<100%), the number of loci present in all genomes i
 `chewBBACA.py TestGenomeQuality -i results_alleles.tsv -n 13 -t 300 -s 5`
 
 ![Genome quality testing of all genomes](http://i.imgur.com/j4u22ZE.png)
+[larger image here fig 2](http://i.imgur.com/j4u22ZE.png)
 
 We selected the results at threshold 25 for further analysis as it presented a significant
  loci presence in 95% of genomes change (+50 loci) and an acceptable loci 
@@ -100,20 +103,22 @@ The first plot representing the total number of bp on contigs with a size over
 10k bp and the N50 of all assemblies, sorted by decreasing values
 
 ![Genome Analysis](http://i.imgur.com/I0fNqtd.png)
+[larger image fig 3](http://i.imgur.com/I0fNqtd.png)
 
 The second plot representing the total number of contigs and the number of 
 contigs over 10k bp
 
 ![Genome Analysis 2](http://i.imgur.com/fabxi0Z.png)
+[larger image](http://i.imgur.com/fabxi0Z.png)
 
 At first sight, most of the removed genomes (57) were located on the lower number of 
-bp/N50 (fig.2) and the higher number of contigs (fig.3)
+bp/N50 (fig.3) and the higher number of contigs (fig.4)
 
 The remaining 5 genomes were individually checked :
- 
-    1- GCA_000186445.1 - 21 contigs but only 1 is above 10k (Scaffold with lot of N ,134 real contigs)
-    2- GCA_000221325.2 - NCBI curated it out of RefSeq for having a genome length too large
-    3- GCA_000427055.1 - NCBI curated it out of RefSeq for having many frameshifted proteins
-    4- GCA_000289455.1 - No ST found...
-    5- GCA_000288835.1 - NCBI curated it out of RefSeq for having many frameshifted proteins
+    
+1. **GCA_000186445.1** [here](https://www.ncbi.nlm.nih.gov/assembly/GCA_000186445.1) - 21 contigs but only 1 is above 10k (Scaffold with lot of N ,134 real contigs)
+2. **GCA_000221325.2** [here](https://www.ncbi.nlm.nih.gov/assembly/GCA_000221325.2)- NCBI curated it out of RefSeq for having a genome length too large
+3. **GCA_000427055.1** [here](https://www.ncbi.nlm.nih.gov/assembly/GCA_000427055.1)- NCBI curated it out of RefSeq for having many frameshifted proteins
+4. **GCA_000289455.1** [here](https://www.ncbi.nlm.nih.gov/assembly/GCA_000289455.1)- No ST found...
+5. **GCA_000288835.1** [here](https://www.ncbi.nlm.nih.gov/assembly/GCA_000288835.1)- NCBI curated it out of RefSeq for having many frameshifted proteins
 
