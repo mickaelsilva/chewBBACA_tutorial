@@ -6,7 +6,7 @@ All information about NCBI genomes used in this example is on the .tsv file insi
 was performed using the **32** _Streptococcus agalactiae_ complete genomes (32 genomes with a level of assembly classified as complete genome or chromossome)  available at NCBI,
  resulting in a wgMLST schema of **3128 loci**.
 
-`chewBBACA.py CreateSchema -i complete_genomes/ --cpu 6 -o schema_seed -t Streptococcus_Agalactiae`
+`chewBBACA.py CreateSchema -i complete_genomes/ --cpu 6 -o schema_seed -t "Streptococcus agalactiae"`
 
 Run on intel core i7 with:
 
@@ -16,7 +16,7 @@ Run on intel core i7 with:
 ## Alleles were called
 for the **32** genomes using the wgMLST schema and results were analysed. 
 
-```chewBBACA.py Allelecall -i listgenomes.txt -g listgenes.txt -o results --cpu 6 -t Streptococcus_Agalactiae```
+```chewBBACA.py Allelecall -i listgenomes.txt -g listgenes.txt -o results --cpu 6 -t "Streptococcus agalactiae"```
 
 Run on intel core i7 with:
     
@@ -50,7 +50,7 @@ as being a different species/contamination and removed from the analysis.
 Allele call was performed on the remaining 680 genomes using the **1264 loci** for schema validation. Paralog detection found no paralog loci.
 
 
-```chewBBACA.py Allelecall -i .genomes/ -g listgenes_core.txt -o results --cpu 6 -t Streptococcus_Agalactiae```
+```chewBBACA.py Allelecall -i .genomes/ -g listgenes_core.txt -o results --cpu 6 -t "Streptococcus agalactiae"```
 
 Run on a slurm based HPC :
 
