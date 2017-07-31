@@ -1,6 +1,6 @@
 [comment]: <> (Create chewbbaca-tutorial git)
 
-All information about NCBI genomes used in this example is on the .tsv file inside the genomes folder, view file [here](https://github.com/mickaelsilva/chewBBACA_tutorial/blob/master/info.tsv).
+All information about NCBI genomes used in this example is on the .tsv file inside the genomes folder, view file [here](https://github.com/mickaelsilva/chewBBACA_tutorial/blob/master/genomes/NCBI_genomes_proks.Sagalactiae_allGenomes.2016_08_03.tsv).
 
 ## Schema creation 
 was performed using the **32** _Streptococcus agalactiae_ complete genomes (32 genomes with a level of assembly classified as complete genome or chromossome)  available at NCBI,
