@@ -1,3 +1,4 @@
+[comment]: <> (Create chewbbaca-tutorial git)
 ## Objective
 The objective of this tutorial is to illustrate the complete workflow of a chewBBACA pipeline for creating a wgMLST and a cgMLST schema for a colection of 712 _Streptococcus agalactiae_ genomes (32 complete genomes and 680 assemblies deposited on the Sequence Read Archive) by providing step-by-step instructions and displaying the obtained outputs.
 
@@ -8,8 +9,9 @@ The setup is done by the following steps
 1. do a `git clone https://github.com/mickaelsilva/chewBBACA_tutorial.git` to download the entire repository in the folder of your choice 
 2. `cd chewBBACA_tutorial/' to enter the dir
 3. `unzip genomes/complete_genomes.zip` to extract all the complete genomes files. a directory named complete_genomes will be available at `chewBBACA tutorial/`
+
+All the reported times are relatived to a Dual QuadCore laptop with  intel i7 2.4GHz using 6 cores. Slower machines or using less number of CPUs can greatly increase the analyses duration.
  
-[comment]: <> (Create chewbbaca-tutorial git)
 
 ## Schema creation 
 
@@ -18,13 +20,7 @@ The sequences are present in the `complete_genomes/` folder. The command is the 
 
 `chewBBACA.py CreateSchema -i complete_genomes/ --cpu 6 -o schema_seed -t "Streptococcus agalactiae"`
 
-The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal`training set for _Streptococcus agalactiae_
-
-Running this on a laptop with core i7 2.4GHz  with 6 cpus took:
-
-    Starting Script at : 13:50:57-09/02/2017
-    Finished Script at : 14:07:09-09/02/2017
-
+The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal`training set for _Streptococcus agalactiae_ and tool around 16 minutes to complete resulting on a wgMLST schema wiht 3128 loci.
 
 ## Allele calling 
 The next step was performing allele calling with the created wgMLST schema for the **32** complete genomes. 
@@ -33,20 +29,17 @@ The next step was performing allele calling with the created wgMLST schema for t
 
 The command uses as input `listgenomes.txt`and `listgenes.txt
 
-Running this on a laptop with core i7 2.4GHz  with 6 cpus took:
-    
-    Starting Script at : 11:49:53-04/07/2017
-    Finished Script at : 12:12:05-04/07/2017
-    number of genomes: 32
-    number of loci: 3128
-    used this number of cpus: 6
-    used a bsr of : 0.6
+The allele call used the default BSR threshold of 0.6 (more information on the thresold [here](https://github.com/mickaelsilva/chewBBACA/wiki/AlleleCalling)) and took approximately 22 mins to complete (an average of 41 secs for genome)  
 
 ## Paralog detection 
- 
-returned a set of 24 loci that were removed from further analysis.
+
+The next step on the analysis is, based on the result of the wgMLST allele calling, to determine if some of the loci can be considered paralogous. The Allele call returns a list of Paralogous genes in the `RepeatedLoci.txt' file that can be found on the 'results' folder. 
+The output example is present in `chewBBACA_tutorial/results_cg/results_20170704T121205/`. In chewBBACA_tutorial/results_cg/results_20170704T121205/RepeatedLoci.txt´, a set of 24 loci were identified as possible paralogs 
+that were removed from further analysis. For a more detailed description see the [Alelle Calling]|(https://github.com/mickaelsilva/chewBBACA/wiki/AlleleCalling) entry on the wiki 
+
 
 `chewBBACA.py RemoveGenes -i results_alleles.txt -g RepeatedLoci.txt -o alleleCallMatrix_cg.tsv`
+
 
 
 A set of **1136** loci were found to be present in all the analyzed complete genomes, while **1264** loci were present in at least 95%.
