@@ -1,24 +1,33 @@
-[comment]: <> (Create chewbbaca-tutorial git)
+## Objective
+The objective of this tutorial is to illustrate the complete workflow of a chewBBACA pipeline for creating a wgMLST and a cgMLST schema for a colection of 712 _Streptococcus agalactiae_ genomes (32 complete genomes and 680 assemblies deposited on the Sequence Read Archive) by providing step-by-step instructions and displaying the obtained outputs.
 
 All information about NCBI genomes used in this example is on the .tsv file inside the genomes folder, view file [here](https://github.com/mickaelsilva/chewBBACA_tutorial/blob/master/genomes/NCBI_genomes_proks.Sagalactiae_allGenomes.2016_08_03.tsv).
 
+[comment]: <> (Create chewbbaca-tutorial git)
+
 ## Schema creation 
-was performed using the **32** _Streptococcus agalactiae_ complete genomes (32 genomes with a level of assembly classified as complete genome or chromossome)  available at NCBI,
- resulting in a wgMLST schema of **3128 loci**.
+
+The wgMLST schema was created using the **32** _Streptococcus agalactiae_ complete genomes (32 genomes with a level of assembly classified as complete genome or chromossome)  available at NCBI. 
+The sequences are present in the `complete_genomes/` folder. The command is the following:  
 
 `chewBBACA.py CreateSchema -i complete_genomes/ --cpu 6 -o schema_seed -t "Streptococcus agalactiae"`
 
-Run on intel core i7 with:
+The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal`training set for _Streptococcus agalactiae_
+
+Running this on a laptop with core i7 xxx MHz  with 6 cpus took:
 
     Starting Script at : 13:50:57-09/02/2017
     Finished Script at : 14:07:09-09/02/2017
 
-## Alleles were called
-for the **32** genomes using the wgMLST schema and results were analysed. 
+
+## Allele calling 
+The next step was performing allele calling with the created wgMLST schema for the **32** complete genomes. 
 
 ```chewBBACA.py Allelecall -i listgenomes.txt -g listgenes.txt -o results --cpu 6 -t "Streptococcus agalactiae"```
 
-Run on intel core i7 with:
+The command uses a 
+
+Running this on a laptop with core i7 xxx MHz  with 6 cpus took:
     
     Starting Script at : 11:49:53-04/07/2017
     Finished Script at : 12:12:05-04/07/2017
