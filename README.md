@@ -1,8 +1,14 @@
 ## Objective
 The objective of this tutorial is to illustrate the complete workflow of a chewBBACA pipeline for creating a wgMLST and a cgMLST schema for a colection of 712 _Streptococcus agalactiae_ genomes (32 complete genomes and 680 assemblies deposited on the Sequence Read Archive) by providing step-by-step instructions and displaying the obtained outputs.
 
-All information about NCBI genomes used in this example is on the .tsv file inside the genomes folder, view file [here](https://github.com/mickaelsilva/chewBBACA_tutorial/blob/master/genomes/NCBI_genomes_proks.Sagalactiae_allGenomes.2016_08_03.tsv).
+All information about NCBI genomes used in this example is on the [.tsv file] (https://github.com/mickaelsilva/chewBBACA_tutorial/blob/master/genomes/NCBI_genomes_proks.Sagalactiae_allGenomes.2016_08_03.tsv).
+ inside the `genomes` folder. 
 
+The setup is done by the following steps   
+1. do a `git clone https://github.com/mickaelsilva/chewBBACA_tutorial.git` to download the entire repository in the folder of your choice 
+2. `cd chewBBACA_tutorial/' to enter the dir
+3. `unzip genomes/complete_genomes.zip` to extract all the complete genomes files. a directory named complete_genomes will be available at `chewBBACA tutorial/`
+ 
 [comment]: <> (Create chewbbaca-tutorial git)
 
 ## Schema creation 
@@ -14,7 +20,7 @@ The sequences are present in the `complete_genomes/` folder. The command is the 
 
 The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal`training set for _Streptococcus agalactiae_
 
-Running this on a laptop with core i7 xxx MHz  with 6 cpus took:
+Running this on a laptop with core i7 2.4GHz  with 6 cpus took:
 
     Starting Script at : 13:50:57-09/02/2017
     Finished Script at : 14:07:09-09/02/2017
@@ -25,9 +31,9 @@ The next step was performing allele calling with the created wgMLST schema for t
 
 ```chewBBACA.py Allelecall -i listgenomes.txt -g listgenes.txt -o results --cpu 6 -t "Streptococcus agalactiae"```
 
-The command uses a 
+The command uses as input `listgenomes.txt`and `listgenes.txt
 
-Running this on a laptop with core i7 xxx MHz  with 6 cpus took:
+Running this on a laptop with core i7 2.4GHz  with 6 cpus took:
     
     Starting Script at : 11:49:53-04/07/2017
     Finished Script at : 12:12:05-04/07/2017
