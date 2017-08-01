@@ -35,7 +35,7 @@ The allele call used the default BSR threshold of 0.6 (more information on the t
 
 The next step on the analysis is, based on the result of the wgMLST allele calling, to determine if some of the loci can be considered paralogous. The Allele call returns a list of Paralogous genes in the `RepeatedLoci.txt' file that can be found on the 'results' folder. 
 The output example is present in `chewBBACA_tutorial/results_cg/results_20170704T121205/`. In chewBBACA_tutorial/results_cg/results_20170704T121205/RepeatedLoci.txt´, a set of 24 loci were identified as possible paralogs 
-that were removed from further analysis. For a more detailed description see the [Alelle Calling]|(https://github.com/mickaelsilva/chewBBACA/wiki/AlleleCalling) entry on the wiki 
+that were removed from further analysis. For a more detailed description see the [Alelle Calling](https://github.com/mickaelsilva/chewBBACA/wiki/AlleleCalling) entry on the wiki. 
 
 
 `chewBBACA.py RemoveGenes -i results_alleles.txt -g RepeatedLoci.txt -o alleleCallMatrix_cg.tsv`
