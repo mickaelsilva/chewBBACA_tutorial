@@ -20,14 +20,15 @@ The sequences are present in the `complete_genomes/` folder. The command is the 
 
 `chewBBACA.py CreateSchema -i complete_genomes/ --cpu 6 -o schema_seed -t "Streptococcus agalactiae"`
 
-The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal`training set for _Streptococcus agalactiae_ and tool around 16 minutes to complete resulting on a wgMLST schema wiht 3128 loci.
+The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal`training set for _Streptococcus agalactiae_ and tool around 16 minutes to complete resulting on a wgMLST schema wiht 3128 loci. 
+At this point the schema is defined as a set of loci each with a single allele. 
 
 ## Allele calling 
 The next step was performing allele calling with the created wgMLST schema for the **32** complete genomes. 
 
 ```chewBBACA.py Allelecall -i listgenomes.txt -g listgenes.txt -o results --cpu 6 -t "Streptococcus agalactiae"```
 
-The command uses as input `listgenomes.txt`and `listgenes.txt
+The command uses as input `listgenomes.txt`and `listgenes.txt`
 
 The allele call used the default BSR threshold of 0.6 (more information on the thresold [here](https://github.com/mickaelsilva/chewBBACA/wiki/AlleleCalling)) and took approximately 22 mins to complete (an average of 41 secs for genome)  
 
