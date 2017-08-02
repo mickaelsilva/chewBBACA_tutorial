@@ -1,6 +1,6 @@
-[comment]: <> (Create chewbbaca-tutorial git)
+
 ## Objective
-The objective of this tutorial is to illustrate the complete workflow of a chewBBACA pipeline for creating a wgMLST and a cgMLST schema for a colection of 712 _Streptococcus agalactiae_ genomes (32 complete genomes and 680 assemblies deposited on the Sequence Read Archive) by providing step-by-step instructions and displaying the obtained outputs.
+The objective of this tutorial is to illustrate the complete workflow of a chewBBACA pipeline for creating a wgMLST and a cgMLST schema for a colection of 714 _Streptococcus agalactiae_ genomes (32 complete genomes and 683 assemblies deposited on the Sequence Read Archive) by providing step-by-step instructions and displaying the obtained outputs.
 
 All information about NCBI genomes used in this example is on the [.tsv file](https://github.com/mickaelsilva/chewBBACA_tutorial/blob/master/genomes/NCBI_genomes_proks.Sagalactiae_allGenomes.2016_08_03.tsv).
  inside the `genomes` folder. 
@@ -20,13 +20,15 @@ The sequences are present in the `complete_genomes/` folder. The command is the 
 
 `chewBBACA.py CreateSchema -i complete_genomes/ --cpu 6 -o schema_seed -t "Streptococcus agalactiae"`
 
-The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal`training set for _Streptococcus agalactiae_ and tool around 16 minutes to complete resulting on a wgMLST schema wiht 3128 loci. 
+The command uses 6 CPU and outputs the schema to `schema_seed` folder using the `prodigal` training set for _Streptococcus agalactiae_ and tool around 16 minutes to complete resulting on a wgMLST schema wiht 3128 loci. 
 At this point the schema is defined as a set of loci each with a single allele. 
 
 ## Allele calling 
 The next step was performing allele calling with the created wgMLST schema for the **32** complete genomes. 
 
 ```chewBBACA.py Allelecall -i listgenomes.txt -g listgenes.txt -o results --cpu 6 -t "Streptococcus agalactiae"```
+
+[comment]: <> (JAC IS here in review)
 
 The command uses as input `listgenomes.txt`and `listgenes.txt`
 
@@ -41,8 +43,6 @@ that were removed from further analysis. For a more detailed description see the
 
 `chewBBACA.py RemoveGenes -i results_alleles.txt -g RepeatedLoci.txt -o alleleCallMatrix_cg.tsv`
 
-
-
 A set of **1136** loci were found to be present in all the analyzed complete genomes, while **1264** loci were present in at least 95%.
 
 `chewBBACA.py TestGenomeQuality -i alleleCallMatrix_cg.tsv -n 13 -t 200 -s 5`
@@ -51,11 +51,13 @@ A set of **1136** loci were found to be present in all the analyzed complete gen
 [larger image fig 1](http://i.imgur.com/Zh6GRk9.png)
 
 
-## Enriching the dataset analysis
-with other assemblies submitted as **Streptococcus Agalactiae** on NCBI were downloaded ( 03-08-2016, downloadable zip file [here](https://drive.google.com/file/d/0Bw6VuoagsdhmaWEtR25fODlJTEk/view?usp=sharing)) 
+## Allele call for 682 Streptococci agalactiae assemblies 
+
+683 assemblies of **Streptococcus Agalactiae** available on NCBI were downloaded ( 03-08-2016, downloadable zip file [here](https://drive.google.com/file/d/0Bw6VuoagsdhmaWEtR25fODlJTEk/view?usp=sharing)) 
 and analyzed with [MLST](https://github.com/tseemann/mlst) in order to exclude possible mislabeled 
-samples as Streptococcus Agalactiae. A total of **682 genomes** were downloaded being 2 (GCA_000323065.2_ASM32306v2 and GCA_001017915.1_ASM101791v1) detected 
-as being a different species/contamination and removed from the analysis. 
+samples as _Streptococcus agalactiae_. 
+
+A total of **682 genomes** were downloaded being 2 (GCA_000323065.2_ASM32306v2 and GCA_001017915.1_ASM101791v1) detected as being a different species/contamination and removed from the analysis. 
 Allele call was performed on the remaining 680 genomes using the **1264 loci** for schema validation. Paralog detection found no paralog loci.
 
 
