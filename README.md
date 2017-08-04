@@ -7,7 +7,7 @@ All information about NCBI genomes used in this example is on the [.tsv file](ht
 
 The setup is done by the following steps   
 1. do a `git clone https://github.com/mickaelsilva/chewBBACA_tutorial.git` to download the entire repository in the folder of your choice 
-2. `cd chewBBACA_tutorial/' to enter the dir
+2. `cd chewBBACA_tutorial/` to enter the dir
 3. `unzip genomes/complete_genomes.zip` to extract all the complete genomes files. a directory named complete_genomes will be available at `chewBBACA tutorial/`
 
 All the reported times were calculated for a Dual QuadCore laptop with  intel i7 2.4GHz using 6 cores. Using slower machines or using less number of CPUs can greatly increase the duration of the analyses.
@@ -30,7 +30,7 @@ The next step was to perform allele calling with the created wgMLST schema for t
 
 [comment]: <> (JAC IS here in review)
 
-The command uses as input `listgenomes.txt`and `listgenes.txt`
+The command uses as input `listgenomes.txt`and `listgenes.txt` (a path to both folders may also be used).
 
 The allele call used the default BSR threshold of 0.6 (more information on the thresold [here](https://github.com/mickaelsilva/chewBBACA/wiki/AlleleCalling)) and took approximately 22 mins to complete (an average of 41 secs per/for each genome)  
 
